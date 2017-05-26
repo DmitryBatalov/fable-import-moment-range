@@ -1,0 +1,24 @@
+{
+    "name": "fable-import-moment-range",
+    "version": "0.1.0",
+    "description": "Fable bindings for moment-range",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/DmitryBatalov/fable-import-moment-range.git"
+    },
+    "dependencies": {
+        "moment": "^2.18.1",
+        "moment-range": "^3.0.3"
+    },
+    "keywords": [
+        "F#",
+        "Fable",
+        "Momentjs",
+        "MomentRange"
+    ],
+    "author": "Dmitry Batalov",
+    "license": "MIT"
+}
