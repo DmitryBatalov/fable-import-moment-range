@@ -7,6 +7,7 @@ open Fable.Import.Moment
 
 module MomentRange = 
     type [<StringEnum>] Interval = | Year | Quarter | Month | Week | Day | Hour | Minute | Second
+    type [<StringEnum>] DateMeasurment = | Years | Months |  Weeks |  Days |  Hours |  Minutes |  Seconds
 
     type OverlapsOption(adjacent: bool) = 
         member this.adjacent = adjacent
@@ -33,13 +34,12 @@ module MomentRange =
         member this.center(): Moment = jsNative
         member this.clone(): DateRange = jsNative
         member this.contains(other: DateRange, options: ContainsOption): bool = jsNative
-        member this.diff(unit: MomentComparable, rounded: bool) : float = jsNative
-        member this.duration(unit: MomentComparable, rounded: bool): float = jsNative
+        member this.diff(unit: DateMeasurment, rounded: bool) : float = jsNative
+        member this.duration(unit: DateMeasurment, rounded: bool): float = jsNative
         member this.intersect(other: DateRange): DateRange option = jsNative
         member this.isEqual(other: DateRange): bool = jsNative
         member this.isSame(other: DateRange): bool = jsNative
         member this.overlaps(other: DateRange, options: OverlapsOption):  DateRange = jsNative
-
         member this.reverseBy(interval: Interval, options: ByOption): seq<Moment> = jsNative
         member this.reverseByRange(interval: Interval, options: ByOption): seq<Moment> = jsNative
         member this.substract(others: DateRange): DateRange list = jsNative
